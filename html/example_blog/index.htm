@@ -1,0 +1,65 @@
+<html><head><link href="../tufteSans.css" rel="stylesheet" /><link href="../latex.css" rel="stylesheet" /><meta charset="utf-8" content="width=device-width, initial-scale=1" name="viewport" /><script src="../mathjax-config.js"></script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" type="text/javascript"></script></head><body><article><div class="navline"><a href="../index.htm">Brain, Data, and Science</a><span> &gt; Example blog</span></div><h1>Example blog: This is the title</h1>
+<section>
+<p><span class="newthought">Brain, Data, and Science</span> is a blog by the Diedrichsenlab on brain science, data science, and science in general. Instead of using wordpress or other platforms, we decided that we wanted full control over the formatting to play creatively with form and content. Inspired by Edward Tufte's work, we build this Python code that compiles blogs written in markdown into a web-blog that looks aesthetically pleasing and has the functionality that we wanted.</p>
+</section>
+<section>
+<h2>Getting started</h2>
+<p>To contribute blogs to <em>Brain, Data, and Science</em>, fork or clone <a href="https://github.com/DiedrichsenLab/BrainDataScienceBlog">the repository</a>. Each blog has an own folder.</p>
+<h2>Headers and sections</h2>
+<p>Headers are coded using the standard markdown notions</p>
+<h1>Level 1</h1>
+<h2>Level 2</h2>
+<h3>Level 3</h3>
+<p>Enclose sections that belong together into <code>&lt;/section&gt; &lt;/section&gt;</code> tabs.</p>
+<p><span class="newthought">New thoughts</span> can be highlighted in the beginning of a paragraph by enclosing them into <code>{{...}}</code>.</p>
+<h3>Side notes</h3>
+<p>Side note are a characteristic feature of Tufte's work. They enable authors to provide supplementary information in the text without having the reader go to a different part of the paper.
+When you have a simple comment, you can include it directly in the text<span><label class="margin-toggle sidenote-number" for="sn1"></label><input class="margin-toggle" id="sn1" type="checkbox" /><span class="sidenote">this is a sidenote</span></span>. You can also make general comments as margin notes that are unnumbered <span><label class="margin-toggle" for="mn1">&#8853;</label><input class="margin-toggle" id="mn1" type="checkbox" /><span class="marginnote">This is a margin note.</span></span>. When the viewport gets smaller (i.e. when viewing the page on a mobile device, side and margin notes disappear and are only shown when the user toggles them.)</p>
+<h3>References</h3>
+<p>To include automatic reference formating, include a  <code>reference.bib</code> file in the enclosing folder.
+References then can then be cited using the tag from the bib-file by using a <code>[+citet: Yokoi2019]</code> or <code>[+citep: Berlot2018]</code> tag. The <code>citet</code> citations are replaced with <span>Yokoi &amp; Diedrichsen (2019)</span>,  the <code>citep</code> citations are replaced with <span>(Berlot et al., 2018)</span>. The citations are then added to a reference section in the end of the document.<span><label class="margin-toggle sidenote-number" for="sn2"></label><input class="margin-toggle" id="sn2" type="checkbox" /><span class="sidenote">You can also add citations to a side note <span>(Berlot et al., 2018)</span>, so that the reference does not disrupt the flow of reading, but at the same time the information is right there.</span></span></p>
+<h3>Formulas</h3>
+<p>Math type setting is achieved over MathJax. Math can be either included over inline math, using the dollar sign <code>$a \ne 0$</code> with is set as <span>$a \ne 0$</span>. You can also use round paratheses as delimiter, such as: <code>\\(ax^2 + bx + c = 0\\)</code> which is set as \(ax^2 + bx + c = 0\) . Display equations are delimited by double dollar signs and separated from the main text using an empty line.</p>
+<p><code>$$
+x = {-b \pm \sqrt{b^2-4ac} \over 2a}.
+$$</code></p>
+<p>
+$$
+x = {-b \pm \sqrt{b^2-4ac} \over 2a}.
+$$
+</p>
+<p>This ensures that the equations are rendered correctly in the html, but also in your markdown while writing.</p>
+<h3>Code</h3>
+<p>Code comes in code blocks or inline code. Inline code can be simply set using single quotes <code>`code`</code>. Blocks of code should be enclosed in triple <code>```</code></p>
+<p><code>os.chdir(f"{sourceDir}/{dirname}")
+    with open("info.yaml", "r", encoding="utf-8") as info_file:
+        info = yaml.load(info_file,Loader=yaml.FullLoader)</code></p>
+<h3>Links</h3>
+<p>Links to external documents can be included as is standard in markdown with <code>[link](http://diedrichsenlab.org)</code> syntax which is being set as <a href="http://diedrichsenlab.org">link</a>.</p>
+<h3>Images</h3>
+<p>Figures are included by inserting a paragraph starting with a Figure tag.</p>
+<p><code>![Figure 1](/path/to/img.jpg)**Figure 1.** Some caption for figure 1.</code></p>
+<p>The tag provides the file name of the figure to be included - the rest of the paragraph spells out the caption. So the above statement would be set to</p>
+<figure><label class="margin-toggle" for="icon.png">&#8853;</label><input class="margin-toggle" id="icon.png" type="checkbox" /><span class="marginnote"><strong>Figure 1.</strong> Some caption for figure 1.</span><img alt="Figure 1" src="icon.png" /></figure>
+</section>
+<section>
+<h2>Acknowledgements</h2>
+<p>The basic formating is based from Tufte-LaTeX and and the GitHub project <a href="https://edwardtufte.github.io/tufte-css/">tufte-css</a> by David Liepman. The code for the blog uses the <a href="https://python-markdown.github.io/">Python-Markdown library</a></p>
+</section>
+<section><h2>References</h2><p class="hangingindent">Yokoi & Diedrichsen (2019). Neural Organization of Hierarchical Motor Sequence Representations in the Human Neocortex. <em>Neuron</em>.</p><p class="hangingindent">Berlot et al. (2018). In search of the engram, 2017. <em>Current Opinion in Behavioral Sciences</em>.</p></section><div class="navline"><a href="../index.htm">Brain, Data, and Science</a><span> &gt; Example blog</span></div></article><div><!-- Default Statcounter code for Diedrichsenlab
+diedrichsenlab.org -->
+<script type="text/javascript">
+    var sc_project=898139;
+    var sc_invisible=1;
+    var sc_security="8cebeda6";
+    </script>
+    <script type="text/javascript"
+    src="https://www.statcounter.com/counter/counter.js"
+    async></script>
+    <noscript><div class="statcounter"><a title="Web Analytics"
+    href="https://statcounter.com/" target="_blank"><img
+    class="statcounter"
+    src="https://c.statcounter.com/898139/0/8cebeda6/1/"
+    alt="Web Analytics"
+    referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+    <!-- End of Statcounter Code --></div></body></html>
